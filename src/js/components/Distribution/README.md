@@ -113,12 +113,8 @@ string
 
 **children**
 
-Function that will be called when each value is rendered. Defaults to `function children(value) {
-    return _react.default.createElement(_Box.Box, {
-      fill: true,
-      border: true
-    }, _react.default.createElement(_Text.Text, null, value.value));
-  }`.
+Function that will be called when each value is rendered. Defaults to `function (value) { return (react_1.default.createElement(Box_1.Box, { fill: true, border: true },
+            react_1.default.createElement(Text_1.Text, null, value.value))); }`.
 
 ```
 function

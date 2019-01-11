@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import * as PropTypes from 'prop-types';
 import 'jest-styled-components';
 import { cleanup, render, fireEvent } from 'react-testing-library';
 import { getByTestId, queryByTestId } from 'dom-testing-library';
 
 import { createPortal, expectPortal } from '../../../utils/portal';
 
-import { Grommet, Box, Layer } from '../..';
+import { Grommet } from '../../Grommet';
+import { Box } from '../../Box';
+import { Layer } from '..';
 import { LayerContainer } from '../LayerContainer';
 
 class FakeLayer extends Component {

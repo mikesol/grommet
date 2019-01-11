@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 import { StyledParagraph } from './StyledParagraph';
 
@@ -8,7 +8,8 @@ const Paragraph = ({ color, ...rest }) => (
 
 let ParagraphDoc;
 if (process.env.NODE_ENV !== 'production') {
-  ParagraphDoc = require('./doc').doc(Paragraph); // eslint-disable-line global-require
+  // tslint:disable-next-line:no-var-requires
+  ParagraphDoc = require('./doc').doc(Paragraph);
 }
 const ParagraphWrapper = ParagraphDoc || Paragraph;
 

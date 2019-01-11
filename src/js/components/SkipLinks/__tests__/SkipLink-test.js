@@ -2,7 +2,10 @@ import React from 'react';
 import 'jest-styled-components';
 import { cleanup, render, fireEvent } from 'react-testing-library';
 
-import { Grommet, SkipLinks, SkipLink, SkipLinkTarget } from '../..';
+import { SkipLinks } from '..';
+import { SkipLink } from '../../SkipLink';
+import { SkipLinkTarget } from '../../SkipLinkTarget';
+import { Grommet } from '../../Grommet';
 
 describe('SkipLink', () => {
   afterEach(cleanup);

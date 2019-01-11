@@ -3,7 +3,11 @@ import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 
 import { FormNextLink, FormPreviousLink } from 'grommet-icons';
-import { Box, Button, Calendar, Grommet, Text } from '../..';
+import { Box } from '../../Box';
+import { Button } from '../../Button';
+import { Calendar } from '..';
+import { Grommet } from '../../Grommet';
+import { Text } from '../../Text';
 
 const DATE = '2018-01-15T00:00:00-08:00';
 const DATES = [

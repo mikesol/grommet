@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import * as PropTypes from 'prop-types';
 import { storiesOf } from '@storybook/react';
 
 import { Grommet, Grid, Heading } from 'grommet';

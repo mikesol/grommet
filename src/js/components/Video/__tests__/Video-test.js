@@ -3,7 +3,8 @@ import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 // import { mount } from 'enzyme';
 
-import { Grommet, Video } from '../..';
+import { Grommet } from '../../Grommet';
+import { Video } from '..';
 
 const CONTENTS = [<source key="source" />, <track key="track" />];
 

@@ -6,7 +6,8 @@ import { getByText as getByTextDOM } from 'dom-testing-library';
 
 import { createPortal, expectPortal } from '../../../utils/portal';
 
-import { Grommet, Menu } from '../..';
+import { Grommet } from '../../Grommet';
+import { Menu } from '..';
 
 describe('Menu', () => {
   beforeEach(createPortal);

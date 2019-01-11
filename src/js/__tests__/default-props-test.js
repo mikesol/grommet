@@ -4,7 +4,10 @@ import styled from 'styled-components';
 
 import 'jest-styled-components';
 
-import { grommet, defaultProps, extendDefaultTheme, Box, Grommet } from '..';
+import { defaultProps, extendDefaultTheme } from '../default-props';
+import { grommet } from '../themes/grommet';
+import { Box } from '../components/Box';
+import { Grommet } from '../components/Grommet';
 
 const CustomBox = styled.div`
   background: ${props => props.theme.global.colors.brand};

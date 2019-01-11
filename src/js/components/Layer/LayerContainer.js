@@ -2,7 +2,7 @@ import React, { createRef, Component } from 'react';
 import styled from 'styled-components';
 
 import { defaultProps } from '../../default-props';
-import { ThemeContext } from '../../contexts';
+import { ThemeContext } from '../../contexts/ThemeContext/ThemeContext';
 
 import { FocusedContainer } from '../FocusedContainer';
 import { Keyboard } from '../Keyboard';

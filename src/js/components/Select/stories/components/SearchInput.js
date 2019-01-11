@@ -1,6 +1,6 @@
 import React, { createRef, Component } from 'react';
 
-import { TextInput } from '../../..';
+import { TextInput } from '../../../TextInput';
 
 import { SearchBorderBox } from './SearchBorderBox';
 import { SearchInputContext } from './SearchInputContext';

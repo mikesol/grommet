@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import * as React from 'react';
+import * as PropTypes from 'prop-types';
 
 import {
   getBodyChildElements,
@@ -9,7 +9,7 @@ import {
 
 const isNotAncestorOf = child => parent => !parent.contains(child);
 
-export class FocusedContainer extends Component {
+export class FocusedContainer extends React.Component {
   static defaultProps = {
     hidden: false,
     restrictScroll: false,

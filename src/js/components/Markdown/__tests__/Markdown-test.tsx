@@ -1,9 +1,9 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
 import 'jest-styled-components';
+import * as React from 'react';
+import renderer from 'react-test-renderer';
 
-import { Grommet } from '../../Grommet';
 import { Markdown } from '..';
+import { Grommet } from '../../Grommet';
 
 const CONTENT = `
 # H1

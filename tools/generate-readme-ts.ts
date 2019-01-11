@@ -1,10 +1,10 @@
-import del from 'del';
-import fs from 'fs';
-import path from 'path';
+import * as del from 'del';
+import * as fs from 'fs';
+import * as path from 'path';
 
 const code = '```';
 
-const replaceHoc = content => content.replace(/(With.*\()(.*)(\))/g, '$2');
+const replaceHoc = (content) => content.replace(/(With.*\()(.*)(\))/g, '$2');
 
 const getTypescriptDefinitionFile = (
   component,
@@ -27,9 +27,9 @@ declare const ${component}: React.ComponentType<${component}Props${
 export { ${component} };
 `;
 
-const toMarkdown = theme => {
+const toMarkdown = (theme) => {
   const themeProps = Object.keys(theme).map(
-    themeEntry => `
+    (themeEntry) => `
 **${themeEntry}**
 
 ${theme[themeEntry].description} Expects \`${theme[themeEntry].type}\`.
@@ -45,25 +45,27 @@ ${code}
   ${themeProps.join('')}`;
 };
 
-const components = folder =>
+const components = (folder) =>
   fs
     .readdirSync(folder)
     .filter(
-      file =>
+      (file) =>
         fs.statSync(path.join(folder, file)).isDirectory() &&
         fs.existsSync(path.join(folder, file, 'doc.js')),
     );
 
 const FOLDER = path.resolve('src/js/components');
 
-components(FOLDER).forEach(component => {
+components(FOLDER).forEach((component) => {
   /* eslint-disable */
   const { doc, themeDoc } = require(path.join(FOLDER, component, 'doc.js'));
-  const componentModule = require(path.join(FOLDER, component, 'index.js'));
+  const indexJSPath = path.join(FOLDER, component, 'index.js');
+  const indexTSPath = path.join(FOLDER, component, 'index.tsx');
+  const componentModule = require(fs.existsSync(indexTSPath) ? indexTSPath : indexJSPath);
   // we use the second array element since the first is '__esModule'.
   const Component =
     componentModule[
-      Object.keys(componentModule).filter(k => k === component)[0]
+      Object.keys(componentModule).filter((k) => k === component)[0]
     ];
   /* eslint-enable */
 

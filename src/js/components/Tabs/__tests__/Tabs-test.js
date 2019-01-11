@@ -3,7 +3,9 @@ import 'jest-styled-components';
 import renderer from 'react-test-renderer';
 import { render, fireEvent } from 'react-testing-library';
 
-import { Grommet, Tab, Tabs } from '../..';
+import { Grommet } from '../../Grommet';
+import { Tab } from '../../Tab';
+import { Tabs } from '..';
 
 describe('Tabs', () => {
   test('no Tab', () => {

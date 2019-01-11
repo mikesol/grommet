@@ -1,5 +1,5 @@
 import React, { createRef, Component, Fragment } from 'react';
-import PropTypes from 'prop-types';
+import * as PropTypes from 'prop-types';
 import { storiesOf } from '@storybook/react';
 
 import { Box, Button, Drop, Grommet, Text } from 'grommet';

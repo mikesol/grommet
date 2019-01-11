@@ -1,7 +1,7 @@
 /* eslint-disable react/no-multi-comp */
-import React, { Component } from 'react';
+import * as hoistNonReactStatics from 'hoist-non-react-statics';
+import * as React from 'react';
 import getDisplayName from 'recompose/getDisplayName';
-import hoistNonReactStatics from 'hoist-non-react-statics';
 import { withTheme } from 'styled-components';
 import { AnnounceContext } from '../contexts';
 
@@ -15,7 +15,7 @@ if (process.env.NODE_ENV !== 'production') {
 export const withDocs = doc;
 
 export const withFocus = WrappedComponent => {
-  class FocusableComponent extends Component {
+  class FocusableComponent extends React.Component {
     static getDerivedStateFromProps(nextProps, prevState) {
       const { withFocusRef } = nextProps;
       const { wrappedRef } = prevState;

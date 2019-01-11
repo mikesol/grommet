@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import { defaultProps } from '../../default-props';
-import { ThemeContext } from '../../contexts';
+import { ThemeContext } from '../../contexts/ThemeContext/ThemeContext';
 import { FocusedContainer } from '../FocusedContainer';
 import {
   backgroundIsDark,

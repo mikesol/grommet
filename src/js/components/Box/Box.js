@@ -2,7 +2,7 @@ import React, { Children, Component } from 'react';
 import { compose } from 'recompose';
 
 import { withForwardRef, withDocs } from '../hocs';
-import { ThemeContext } from '../../contexts';
+import { ThemeContext } from '../../contexts/ThemeContext/ThemeContext';
 import { defaultProps } from '../../default-props';
 import { backgroundIsDark } from '../../utils';
 

@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import * as PropTypes from 'prop-types';
 import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 
 import { findAllByType } from '../../../utils';
 
-import { Grommet, RoutedButton } from '../..';
+import { Grommet } from '../../Grommet';
+import { RoutedButton } from '..';
 
 class FakeRouter extends Component {
   static propTypes = {

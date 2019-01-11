@@ -3,7 +3,8 @@ import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 
 import { findAllByType } from '../../../utils';
-import { Grommet, Button } from '../..';
+import { Grommet } from '../../Grommet';
+import { Button } from '..';
 
 test('Button renders', () => {
   const component = renderer.create(

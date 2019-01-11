@@ -2,15 +2,13 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 
-import {
-  Grommet,
-  Table,
-  TableHeader,
-  TableFooter,
-  TableBody,
-  TableRow,
-  TableCell,
-} from '../..';
+import { Grommet } from '../../Grommet';
+import { Table } from '..';
+import { TableHeader } from '../../TableHeader';
+import { TableFooter } from '../../TableFooter';
+import { TableBody } from '../../TableBody';
+import { TableRow } from '../../TableRow';
+import { TableCell } from '../../TableCell';
 
 test('Table renders', () => {
   const component = renderer.create(

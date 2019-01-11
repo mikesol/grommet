@@ -1,9 +1,12 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import * as PropTypes from 'prop-types';
 import 'jest-styled-components';
 import { cleanup, render } from 'react-testing-library';
 
-import { Grommet, Box, Diagram, Stack } from '../..';
+import { Grommet } from '../../Grommet';
+import { Box } from '../../Box';
+import { Diagram } from '..';
+import { Stack } from '../../Stack';
 
 const Context = ({ children }) => (
   <Grommet>

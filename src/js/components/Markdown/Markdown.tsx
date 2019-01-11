@@ -1,14 +1,24 @@
-import React, { Component } from 'react';
 import Markdown from 'markdown-to-jsx';
+import * as React from 'react';
 
 import { deepMerge } from '../../utils';
 
+import { Anchor } from '../Anchor';
 import { Heading } from '../Heading';
 import { Paragraph } from '../Paragraph';
-import { Anchor } from '../Anchor';
 
-class GrommetMarkdown extends Component {
-  render() {
+interface IComponents {
+  [key: string]: HTMLElement;
+}
+
+interface IGrommetMarkdown {
+  components: IComponents;
+  options: any;
+  theme: any;
+}
+
+class GrommetMarkdown extends React.Component<IGrommetMarkdown> {
+  public render() {
     const { components, options, theme, ...rest } = this.props;
 
     const heading = [1, 2, 3, 4].reduce((obj, level) => {
@@ -22,8 +32,8 @@ class GrommetMarkdown extends Component {
 
     const overrides = deepMerge(
       {
-        p: { component: Paragraph },
         a: { component: Anchor },
+        p: { component: Paragraph },
       },
       heading,
       components,
@@ -36,7 +46,8 @@ class GrommetMarkdown extends Component {
 
 let GrommetMarkdownDoc;
 if (process.env.NODE_ENV !== 'production') {
-  GrommetMarkdownDoc = require('./doc').doc(GrommetMarkdown); // eslint-disable-line global-require
+  // tslint:disable-next-line:no-var-requires
+  GrommetMarkdownDoc = require('./doc').doc(GrommetMarkdown);
 }
 const GrommetMarkdownWrapper = GrommetMarkdownDoc || GrommetMarkdown;
 

@@ -13,7 +13,7 @@ const plugins = [
 
 export default {
   devtool: 'hidden-source-map',
-  entry: './src/js/index.js',
+  entry: './src/js/index.tsx',
   output: {
     path: path.resolve('./dist'),
     filename: 'grommet.min.js',

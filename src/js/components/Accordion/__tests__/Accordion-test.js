@@ -3,7 +3,10 @@ import 'jest-styled-components';
 import renderer from 'react-test-renderer';
 import { cleanup, render, fireEvent } from 'react-testing-library';
 
-import { Accordion, AccordionPanel, Box, Grommet } from '../..';
+import { Accordion } from '..';
+import { AccordionPanel } from '../../AccordionPanel';
+import { Box } from '../../Box';
+import { Grommet } from '../../Grommet';
 
 describe('Accordion', () => {
   afterEach(cleanup);

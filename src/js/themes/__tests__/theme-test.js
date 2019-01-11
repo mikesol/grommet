@@ -5,7 +5,10 @@ import 'jest-styled-components';
 import { hpe } from 'grommet-theme-hpe';
 import { Add } from 'grommet-icons';
 
-import { Grommet, Anchor, Box, Text } from '../../components';
+import { Grommet } from '../../components/Grommet';
+import { Anchor } from '../../components/Anchor';
+import { Box } from '../../components/Box';
+import { Text } from '../../components/Text';
 import { dark } from '..';
 
 const colors = [

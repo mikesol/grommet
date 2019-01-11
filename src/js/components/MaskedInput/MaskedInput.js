@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { compose } from 'recompose';
 
-import { ThemeContext } from '../../contexts';
+import { ThemeContext } from '../../contexts/ThemeContext/ThemeContext';
 import { defaultProps } from '../../default-props';
 import { Box } from '../Box';
 import { Button } from '../Button';
