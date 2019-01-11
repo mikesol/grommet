@@ -1,9 +1,10 @@
 /* eslint-disable react/no-multi-comp */
-import * as hoistNonReactStatics from 'hoist-non-react-statics';
 import * as React from 'react';
 import getDisplayName from 'recompose/getDisplayName';
 import { withTheme } from 'styled-components';
 import { AnnounceContext } from '../contexts';
+
+const hoistNonReactStatics = require('hoist-non-react-statics'); // eslint-disable-line global-require
 
 let doc = () => x => x;
 
